@@ -8,12 +8,12 @@ public class Principal{
         System.out.println("Probando");
 
         Lista lista = new Lista();
-        Nodo nodo = new Nodo("Arsenal");
-        lista.adicionarNodo(nodo);
-        Nodo nodo1 = new Nodo("Chelsea");
-        lista.adicionarNodo(nodo1);
-        Nodo nodo2 = new Nodo (Liverpool);
-        lista.adicionarNodo(nodo2)
+        Nodo nodo = new Nodo("Chelsea");
+        lista.adicionarNodoInicio(nodo);
+        Nodo nodo1 = new Nodo("liverpool");
+        lista.adicionarNodoInicio(nodo1);
+        //Nodo nodo2 = new Nodo(informacion:"liverpool");
+        //lista.adicionarNodos(nodo2);
         lista.imprimir();
     }
 }

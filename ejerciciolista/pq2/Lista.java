@@ -9,13 +9,15 @@ public class Lista {
      * Adiciona un nodo al final de la lista
      * @param nodo Nodo
      */
-    public void adicionarNodo(Nodo nodo){
+    public void adicionarNodoInicio(Nodo nodo){
         if (nodo != null){
             //si nodo tiene algo esta lleno sino no existe lista 
             if (nodoPrincipal == null){
                 this.nodoPrincipal = nodo;
             }else{
-                this.nodoPrincipal.siguienteNodo = nodo;
+                //this.nodoPrincipal.siguienteNodo = nodo;
+                nodo.siguienteNodo = nodoPrincipal;
+                nodoPrincipal = nodo;
             }
            
 
@@ -26,8 +28,14 @@ public class Lista {
      * imprime toda la lista
      */
     public void imprimir(){
-        System.out.println(this.nodoPrincipal);
-        System.out.println(this.nodoPrincipal.siguienteNodo);
+        Nodo nodoAux = this.nodoPrincipal;
+        //System.out.println(this.nodoPrincipal);
+        //System.out.println(this.nodoPrincipal.siguienteNodo);
+        while (nodoAux != null){
+            System.out.println(nodoAux.informacion);
+            nodoAux = nodoAux.siguienteNodo;
+
+        }
         
 
 
